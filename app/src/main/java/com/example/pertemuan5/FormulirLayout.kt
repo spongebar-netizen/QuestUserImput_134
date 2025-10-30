@@ -34,3 +34,4 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     var displayedAlamat by remember { mutableStateOf("") }
     var displayedGender by remember { mutableStateOf("") }
 
+    val genderOptions = listOf("Laki-laki", "Perempuan")
