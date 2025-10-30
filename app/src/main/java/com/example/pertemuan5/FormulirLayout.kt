@@ -28,3 +28,4 @@ import com.example.pertemuan5.ui.theme.Pertemuan5Theme
 fun FormulirScreen(modifier: Modifier = Modifier) {
     var inputNama by remember { mutableStateOf("") }
     var inputAlamat by remember { mutableStateOf("") }
+    var selectedGender by remember { mutableStateOf("") }
