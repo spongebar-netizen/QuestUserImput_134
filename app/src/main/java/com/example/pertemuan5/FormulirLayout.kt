@@ -135,3 +135,10 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
         }
     }
 }
+@Preview(showBackground = true)
+@Composable
+fun FormulirPreview() {
+    Pertemuan5Theme(darkTheme = false) {
+        FormulirScreen()
+    }
+}
