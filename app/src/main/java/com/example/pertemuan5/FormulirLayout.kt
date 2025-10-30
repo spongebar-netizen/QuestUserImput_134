@@ -22,3 +22,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.pertemuan5.ui.theme.Pertemuan5Theme
+
+@Composable
+
+fun FormulirScreen(modifier: Modifier = Modifier) {
+    var inputNama by remember { mutableStateOf("") }
