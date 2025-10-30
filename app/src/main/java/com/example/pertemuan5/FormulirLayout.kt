@@ -35,3 +35,9 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     var displayedGender by remember { mutableStateOf("") }
 
     val genderOptions = listOf("Laki-laki", "Perempuan")
+
+    Column(modifier = modifier.padding(yop = 50.dp),
+        verticalArrangement =  Arrangement.Top,
+        horizontalAlignment =  Alignment.CenterHorizontally) {
+
+        }
