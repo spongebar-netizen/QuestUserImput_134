@@ -32,3 +32,5 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
     var displayedNama by remember { mutableStateOf("") }
     var displayedAlamat by remember { mutableStateOf("") }
+    var displayedGender by remember { mutableStateOf("") }
+
