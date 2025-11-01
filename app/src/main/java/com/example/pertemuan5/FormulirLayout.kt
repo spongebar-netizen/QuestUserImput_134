@@ -122,4 +122,96 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
                         }
                     }
                     Spacer(modifier = Modifier.height(24.dp))
+
+                    Text(text = "STATUS PERKAWINAN", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                    Column(Modifier.fillMaxWidth()) {
+                        listStatusPerkawinan.forEach { option ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .selectable(
+                                        selected = (statusPerkawinan == option),
+                                        onClick = { statusPerkawinan = option }
+                                    )
+                                    .padding(vertical = 4.dp)
+                            ) {
+                                RadioButton(
+                                    selected = (statusPerkawinan == option),
+                                    onClick = { statusPerkawinan = option }
+                                )
+                                Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                            }
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(24.dp))
+
+                    Text(text = "ALAMAT", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                    OutlinedTextField(
+                        value = alamat,
+                        onValueChange = { alamat = it },
+                        label = { Text("Alamat") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                    Spacer(modifier = Modifier.height(32.dp))
+
+                    Button(
+                        onClick = {
+                            displayedNama = namaLengkap
+                            displayedJenisKelamin = jenisKelamin
+                            displayedStatus = statusPerkawinan
+                            displayedAlamat = alamat
+                            // -----------------------------
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = headerColor)
+                    ) {
+                        Text(text = "Submit")
+                    }
+
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = Color.Black
+                        ),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp)
+                        ) {
+                            Text(
+                                text = "Nama : $displayedNama",
+                                color = Color.White
+                            )
+                            Text(
+                                text = "Jenis Kelamin : $displayedJenisKelamin",
+                                color = Color.White
+                            )
+                            Text(
+                                text = "Status : $displayedStatus",
+                                color = Color.White
+                            )
+                            Text(
+                                text = "Alamat : $displayedAlamat",
+                                color = Color.White
+                            )
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun FormulirPendaftaranPreview() {
+    Pertemuan5Theme {
+        FormulirScreen()
+    }
 }
