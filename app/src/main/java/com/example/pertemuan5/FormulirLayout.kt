@@ -47,3 +47,8 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     var displayedJenisKelamin by remember { mutableStateOf("") }
     var displayedStatus by remember { mutableStateOf("") }
     var displayedAlamat by remember { mutableStateOf("") }
+    val listJenisKelamin = listOf("Laki-laki", "Perempuan")
+    val listStatusPerkawinan = listOf("Janda", "Lajang", "Duda")
+    val headerColor = Color(0xFF6A00EE)
+    val backgroundColor = Color(0xFFF0E6FF)
+
