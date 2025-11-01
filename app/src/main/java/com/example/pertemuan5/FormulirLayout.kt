@@ -43,3 +43,5 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     var jenisKelamin by remember { mutableStateOf("") }
     var statusPerkawinan by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
+    var displayedNama by remember { mutableStateOf("") }
+    }
