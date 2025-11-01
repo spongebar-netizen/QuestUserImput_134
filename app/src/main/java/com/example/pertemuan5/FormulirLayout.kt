@@ -99,4 +99,3 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
                         singleLine = true
                     )
                     Spacer(modifier = Modifier.height(24.dp))
-}
