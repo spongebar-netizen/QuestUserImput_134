@@ -52,3 +52,28 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     val headerColor = Color(0xFF6A00EE)
     val backgroundColor = Color(0xFFF0E6FF)
 
+    Surface(
+        modifier = modifier
+            .fillMaxSize()
+            .systemBarsPadding(),
+        color = backgroundColor
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(headerColor)
+                    .padding(vertical = 20.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "Formulir Pendaftaran",
+                    color = Color.White,
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+}
