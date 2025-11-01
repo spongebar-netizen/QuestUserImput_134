@@ -99,3 +99,27 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
                         singleLine = true
                     )
                     Spacer(modifier = Modifier.height(24.dp))
+
+                    Text(text = "JENIS KELAMIN", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                    Column(Modifier.fillMaxWidth()) {
+                        listJenisKelamin.forEach { option ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .selectable(
+                                        selected = (jenisKelamin == option),
+                                        onClick = { jenisKelamin = option }
+                                    )
+                                    .padding(vertical = 4.dp)
+                            ) {
+                                RadioButton(
+                                    selected = (jenisKelamin == option),
+                                    onClick = { jenisKelamin = option }
+                                )
+                                Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                            }
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(24.dp))
+}
