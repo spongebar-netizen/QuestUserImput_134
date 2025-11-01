@@ -76,4 +76,27 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
                     fontWeight = FontWeight.Bold
                 )
             }
+
+            Card(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 8.dp),
+                shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .padding(24.dp)
+                        .verticalScroll(rememberScrollState())
+                ) {
+
+                    Text(text = "NAMA LENGKAP", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                    OutlinedTextField(
+                        value = namaLengkap,
+                        onValueChange = { namaLengkap = it },
+                        label = { Text("Isian nama lengkap") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
 }
