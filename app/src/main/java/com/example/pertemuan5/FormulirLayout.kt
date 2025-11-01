@@ -94,7 +94,7 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
                     OutlinedTextField(
                         value = namaLengkap,
                         onValueChange = { namaLengkap = it },
-                        label = { Text("Isian nama lengkap") },
+                        label = { Text(" Nama lengkap") },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )
